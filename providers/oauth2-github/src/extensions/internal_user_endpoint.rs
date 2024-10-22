@@ -53,7 +53,7 @@ pub struct User {
     pub id: usize,
     pub avatar_url: String,
     pub name: String,
-    pub email: String,
+    pub email: Option<String>,
     //
     #[serde(flatten, skip_serializing_if = "Option::is_none")]
     pub _extra: Option<Map<String, Value>>,
